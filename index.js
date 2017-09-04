@@ -93,13 +93,13 @@ Square.prototype = Object.create(Rectangle.prototype)
 Square.prototype.constructor = Square
 
 Square.prototype.listProperties = function() {
-  let prop = ""
+  let properties = "The Square Object has: \n"
   for (var prop in this) {
     if(this.hasOwnProperty(prop)) {
-      prop.push(prop)
+      properties += `${prop} \n`
     }
   }
-  return prop
+  return properties
 }
 
 function Triangle(side1, side2, side3) {
